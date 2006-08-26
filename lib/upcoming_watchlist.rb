@@ -1,7 +1,7 @@
 require 'rubygems'
 require_gem 'upcoming'
 require 'liquid_tag_base/liquid_collection_tag_base'
-require 'liquidize_events'
+require 'event_drop'
 
 module MephistoUpcoming
   
