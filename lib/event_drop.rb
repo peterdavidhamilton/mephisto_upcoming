@@ -9,6 +9,7 @@ module MephistoUpcoming
     def initialize(source)
       @source = source
       @event_liquid = {
+        'id' => @source.id,
         'name' => @source.name,
         'tags' => @source.tags.split(' '),
         'description' => @source.description,
