@@ -8,7 +8,7 @@ module MephistoUpcoming
   
   def self.authenticate(options={})
     UpcomingWatchlist.token = if options[:frob]
-      Upcoming::authenticate_with_frob(options[:api_key], options[:frob])
+      Upcoming::authenticate_with_frob(options[:api_key], options[:frob])    
     elsif options[:token]
       Upcoming::authenticate(options[:api_key], options[:token])
     else
