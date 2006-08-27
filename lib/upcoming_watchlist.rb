@@ -26,7 +26,7 @@ module MephistoUpcoming
       result, options = [], evaluate(@options, context)
       
       watchlist = Upcoming::User.get_watchlist(token.user_id)
-      watchlist = watchlist.select { |event| event.status == option[:status] } if options[:status]
+      watchlist = watchlist.select { |event| event.status == options[:status] } if options[:status]
       watchlist = watchlist[0..options[:count] - 1] if options[:count]
       
       watchlist.collect(&:to_liquid).each_with_index do |item, index|
