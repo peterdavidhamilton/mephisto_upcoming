@@ -26,6 +26,10 @@ module MephistoUpcoming
     def venue
       @venue ||= @source.venue.to_liquid
     end
+    
+    def url
+      @url ||= "http://upcoming.org/event/#{@source.id}"
+    end
   
   end
 end

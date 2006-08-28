@@ -1,0 +1,31 @@
+Upcoming Watchlist For Mephisto
+-------------------------------
+
+Include your upcoming.org watchlist in your templates.
+
+Usage
+-----
+
+Install normally:
+
+   ruby script/plugin install http://svn.danwebb.net/external/rails/plugins/mephisto_upcoming/trunk/
+
+Then install the upcoming API gem which you can download from here:
+
+   http://svn.danwebb.net/external/upcoming/pkg/upcoming-0.1.0.gem
+
+Then get your API key and From from the upcoming site and add then to your environment.rb:
+
+   MephistoUpcoming.authenticate :api_key => 'xxxx', :frob => 'xxxx'
+
+Then you are ready to go.
+
+In your templates:
+
+   <ul>
+   {% upcomingwatchlist as event %}
+     <li>{{ event.name }}  {{ event.start | date: '%d %m %y' }} to {{ event.end | date: '%d %m %y' }}</li>
+   {% endupcomingwatchlist %}
+   </ul>
+
+   
