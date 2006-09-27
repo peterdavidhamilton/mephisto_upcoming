@@ -1,6 +1,5 @@
 module MephistoUpcoming
   class EventDrop < Liquid::Drop
-    include Mephisto::Liquid::DropMethods
   
     def event
       @source
