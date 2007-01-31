@@ -3,7 +3,7 @@ module Liquid
   class CollectionTagBase < Liquid::Block
     Syntax = /((#{Liquid::TagAttributes}\s?,?\s?)*)as\s([a-zA-Z_\.\-]+)/
     
-    def initialize(markup, tokens)
+    def initialize(tag_name, markup, tokens)
       super
       if markup =~ Syntax
         @options = parse_options($1)
