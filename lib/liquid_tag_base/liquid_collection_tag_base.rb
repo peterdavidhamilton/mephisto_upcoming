@@ -1,7 +1,7 @@
 module Liquid
   
   class CollectionTagBase < Liquid::Block
-    Syntax = /((#{Liquid::TagAttributes}\s?,?\s?)*)as\s([a-zA-Z_.-]+)/
+    Syntax = /((#{Liquid::TagAttributes}\s?,?\s?)*)as\s([a-zA-Z_\.\-]+)/
     
     def initialize(markup, tokens)
       super
